@@ -1,0 +1,280 @@
+.container{
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1.1fr 1fr;
+  grid-template-rows: 600px 500px 400px 1fr 800px 70px;
+  grid-template-areas:
+    "main main"
+    "swag presentation"
+    "description description"
+    "photos photos"
+    "contact contact"
+    "footer footer"
+}
+h1{
+ text-overflow:ellipsis;
+ white-space:nowrap;
+ transform: translate(-50px,-100px);
+ font-size: 5.7em; 
+ font-family: Montserrat;
+ font-weight: 500;
+ color: black; 
+ text-align: left;
+ z-index: 2;
+ position: absolute;
+ left: 10%;
+ top: 20%;
+}
+h2 {
+ font-size: 4em; 
+ color: black;
+ font-family: Montserrat;
+ padding: 0;
+ margin: 0;
+}
+h3 {
+font-size: 4em;
+color: white;
+font-family: Montserrat;
+text-align: center;
+padding-top: auto;
+padding-bottom: 0;
+margin: 50px;
+}
+h4 {
+color: black;
+font-family: Montserrat;
+font-size: 4em;
+text-align: center;
+}
+p {
+font-family: Montserrat;
+font-size: 1.3em;
+color: black;
+}
+body{
+margin: 0;
+padding: 0;
+}
+main{
+background-color: #6fffd2;
+grid-area:main;
+height: 100%;
+}
+.photoswag{
+width: 100%;
+height: 100%;
+object-fit: cover;
+ }
+#john{
+  font-size: 1.2em;
+  margin-bottom: 25px;
+}
+.headimg {
+width: 100%;
+height: 100%;
+object-fit: cover;
+margin: 0;
+padding: 0;
+z-index: 1;
+
+}
+#swag{
+background-color: blue;
+grid-area:swag;
+height: 100%;
+}
+#presentation{
+background-color: white;
+grid-area:presentation;
+width: 60%;
+height: 45%;
+margin-top: auto;
+margin-bottom: auto;
+margin-left: auto;
+margin-right: auto;
+border-left: 10px solid black;
+padding-left: 40px;
+text-overflow:ellipsis;
+}
+#description{
+background-color: black;
+grid-area:description;
+}
+.descriptif{
+position: relative;
+color: white;
+font-family: Montserrat;
+font-size: 1.2em;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 25px;
+padding: 0;
+width: 50%;
+}
+.contactage{
+position: relative;
+color: white;
+font-family: Montserrat;
+font-size: 1.2em;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 50px;
+padding: 0;
+width: 50%;
+}
+#photos{
+background-color: white;
+grid-area:photos;
+text-align: center;
+}
+.montagnes {
+display: inline-block;
+height: 200px;
+width: 200px;
+padding-left: 48px;
+padding-right: 48px;
+padding-bottom: 40px;
+}
+
+#contact{
+background-color: black;
+grid-area:contact;
+text-align: center;
+}
+input {
+display: table;
+flex-direction: row;
+margin-left: auto;
+margin-right: auto;
+padding: 0px;
+height: 6%;
+width: 100%;
+}
+input::placeholder {
+  opacity: 30%;
+  font-family: Montserrat;
+  font-weight: 450;
+  padding-left: 5px;
+}
+textarea::placeholder{
+  opacity: 30%;
+  font-family: Montserrat;
+  font-weight: 450;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+.nom {
+display: table-cell;
+padding: 0;
+width: 30%;
+margin-bottom: 25px;
+border: 0;
+}
+
+.prenom {
+display: table-cell;
+margin-left: 5%;
+width: 30%;
+margin-bottom: 25px;
+padding: 0;
+border: 0;
+}
+
+.objet {
+width: 65%;
+margin-bottom: 10px;
+}
+.message {
+width: 65%;
+height: 30%;
+margin-bottom: 25px;
+vertical-align: top;
+resize: none;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+button {
+float:right;
+background-color: black;
+font-family: Montserrat;
+font-size: 1.3em;
+color: white;
+border: 1px solid white;
+padding-left: 30px;
+padding-right: 30px;
+padding-top: 10px;
+padding-bottom: 10px;
+margin-right: 17.5%;
+transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+footer{
+background-color: #171717;
+width: 100%;
+height: 100%;
+font-family: Montserrat;
+font-size: 1.2em;
+color: white;
+z-index: 5;
+line-height: 70px;
+text-align: center;
+grid-area:footer;
+}
+
+@media only screen and (max-width:1060px){
+  .container{
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 600px 500px 500px 0.5fr 1fr 800px 70px;
+    grid-template-areas:
+      "main"
+      "swag"
+      "presentation"
+      "description"
+      "photos"
+      "contact"
+      "footer";  
+  }
+  h1{
+ font-size: 4.5em; 
+ font-family: Montserrat;
+ font-weight: 500;
+ color: black; 
+ text-align: left;
+ z-index: 2;
+ position: absolute;
+  left: 10%;
+ top: 25%;
+  }
+  #presentation{
+    height: 45%;
+  }
+}
+@media only screen and (max-width:740px){
+  #presentation{
+    height: 61%;
+}
+h1{
+  font-size: 4.5em; 
+  font-family: Montserrat;
+  font-weight: 500;
+  color: black; 
+  text-align: center;
+  z-index: 2;
+  position: absolute;
+@media only screen and (max-width:620px){
+  .container{
+    height: 430vh;
+    }
+@media only screen and (max-width:615px){
+  .container{
+    height: 650vh;
+    }
